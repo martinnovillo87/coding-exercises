@@ -2,15 +2,18 @@
 
 A Lord of the Rings themed Hangman game built with Python and Tkinter.
 
-The project is a GUI-based version of the classic Hangman game where the player guesses words related to the LOTR universe.
-
+The project is a GUI-based version of the classic Hangman game where the player guesses words related to the LOTR universe. The game fetches data dynamically using APIs (via the `requests` module).
 ## Technologies
+
 - Python
 - Tkinter
-- Pillow
+- Pillow (PIL)
+- Requests (for API access)
 
 ## Status
+
 Prototype / work in progress.  
 The core gameplay is implemented, but the project still has planned improvements and bug fixes.
 
+## Game Preview
 ![Game Preview](assets/Capture.JPG)

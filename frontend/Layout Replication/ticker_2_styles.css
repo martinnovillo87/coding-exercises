@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+}
+
+.grid-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 25% 25%; 
+  column-gap: 1px;
+  padding: 10px ;
+  
+}
+
+.item {
+  display: flex;
+  flex-direction: column; 
+}
+
+
+
+.variable {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.result {
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #007bff;
+  width: 100%;
+}
+
+.divider {
+  height: 1px;
+  background-color: #007bff; 
+  width: 50%;
+}
+
+.divider.top {
+  margin-top: 0;
+  height: 2px;
+}
+
+.footer-note {
+    font-size: 14px
+}

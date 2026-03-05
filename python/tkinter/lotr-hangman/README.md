@@ -12,3 +12,5 @@ The project is a GUI-based version of the classic Hangman game where the player 
 ## Status
 Prototype / work in progress.  
 The core gameplay is implemented, but the project still has planned improvements and bug fixes.
+
+![Game Preview](assets/Capture.JPG)

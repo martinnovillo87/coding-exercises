@@ -1,0 +1,8 @@
+10/10/2025 añadi esqueleto base con funciones del juego.
+- generar palabra en forma de dict.
+- preguntar al jugador la letra.
+- chequear si la letra es aplicable, si va en la palabra o va al ahorcado
+- si acierta todas/5 errores: se termina.
+
+18/10/2025 refactorize todo el codigo
+-añadi interface

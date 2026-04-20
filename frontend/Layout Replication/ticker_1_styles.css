@@ -1,0 +1,103 @@
+
+body {
+    height: 174px;
+    font-family: Arial, sans-serif;
+    margin: 20px; 
+}
+
+/* html, body {
+    /* width: 1000px; 
+    /* height: 174px;   
+    /* margin: 0;         
+    /* padding: 0; 
+    /* overflow: hidden;   
+    /* font-family: Arial, sans-serif; 
+    /* box-sizing: border-box;
+} */
+
+.container {
+    display: flex;
+    align-items: flex-start; 
+    gap: 50px;              
+}
+
+
+
+.container .variable {
+    font-size: 14px;
+}
+
+.container .result {
+    font-size: 13px;
+}
+
+.header {
+    font-size: 22px;       
+    font-weight: bold;
+    color: #555;
+}
+
+.main-title {
+    display: flex;
+    align-items: baseline;  
+    gap: 10px;
+}
+
+.main-title h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px; 
+    margin: 0;
+}
+
+
+
+.main-title .complement {
+    font-size: 16px;      
+    color: gray;
+}
+
+.main-title .complement .highlight {
+  color: green;
+  font-weight: bold;
+}
+
+.subtitle {
+    font-size: 16px;       
+    color: gray;
+    margin: 0;
+}
+
+
+.grid-table {
+    display: grid;
+    grid-template-columns: 120px repeat(3, auto);
+    row-gap: 1px;
+    column-gap: 180px;
+    align-items: left;
+}
+/* LÍNEA VERTICAL */
+.vertical-divider {
+  width: 2px;
+  background-color: gray;
+  align-self: stretch;  
+  column-gap: 5px
+}
+
+.result {
+    background-color: transparent;
+    padding: 5px 10px;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.result:first-child {
+    padding-left: 0;     
+}
+
+.footer-note {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    font-size: 12px;
+    opacity: 0.7;
+}

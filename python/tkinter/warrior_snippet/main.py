@@ -16,5 +16,3 @@ ui = widget_test.UI(root)
 
 # region mainloop
 root.mainloop()
-# endregion
-

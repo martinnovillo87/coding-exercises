@@ -9,4 +9,4 @@ Small Python Tkinter prototype where buttons change the different parts of the h
 ## Status
 Early prototype, more features planned.
 
-![Preview](D:\Sofa\Python\warrior_snippet\assets\screenshots\preview_1.png)
+![Preview](assets/screenshots/preview_1.png)

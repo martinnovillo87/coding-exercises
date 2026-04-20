@@ -1,4 +1,5 @@
 # region module
+import os
 from PIL import Image, ImageTk
 import random
 import slots
@@ -37,23 +38,30 @@ def load_images(self):
             }
         }
     }
-    
+
     for slot, slot_data in self.loaded_images.items():
         if "frame" in slot_data and slot_data["frame"] is None:
-            image = Image.open(f"assets/sprites/{slot}_frame.png")
+            image = Image.open(f"D:/Sofa/Python/coding-exercises/python/tkinter/warrior_snippet/assets/sprites/{slot}_frame.png")
             slot_data["frame"] = ImageTk.PhotoImage(image)
+            
+            
 
         if "variant" in slot_data:
             for variant_name, variant_img in slot_data["variant"].items():
                 if variant_img is None:
-                    image = Image.open(f"assets/sprites/{slot}_{variant_name}.png")
+                    image = Image.open(f"D:/Sofa/Python/coding-exercises/python/tkinter/warrior_snippet/assets/sprites/{slot}_{variant_name}.png")
                     slot_data["variant"][variant_name] = ImageTk.PhotoImage(image)
+                    
+                    
         
         if "state" in slot_data:
             for state_name, state_img in slot_data["state"].items():
                 if state_img is None:
-                    image = Image.open(f"assets/sprites/{slot}_{state_name}.png")
+                    image = Image.open(f"D:/Sofa/Python/coding-exercises/python/tkinter/warrior_snippet/assets/sprites/{slot}_{state_name}.png")
                     slot_data["state"][state_name] = ImageTk.PhotoImage(image)
+                    
+                    
+        
 
         
 

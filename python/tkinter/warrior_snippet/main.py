@@ -7,7 +7,7 @@ import widget_test
 root = tk.Tk()
 root.title("Warrior Snippet")
 root.attributes("-topmost", True)
-root.attributes("-alpha", 0.75)
+# root.attributes("-alpha", 0.75)
 root.geometry("500x500")
 root.resizable(False, False)
 # endregion

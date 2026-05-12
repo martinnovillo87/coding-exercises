@@ -7,6 +7,144 @@ import slots
 
 def load_images(self):
     self.loaded_images = {
+        "letter": {
+            # "a": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            "b": {
+                "color": {
+                    "yellow": None,
+                    "red": None,
+                    "green": None
+                    }
+            },
+            # "c": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            # "d": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            # "e": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            # "f": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            # "g": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            # "h": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            "i": {
+                "color": {
+                    "yellow": None,
+                    "red": None,
+                    "green": None
+                    }
+            },
+            # "j": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            # "k": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            # "l": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            # "m": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            # "n": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            # "o": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            # "p": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            # "q": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            # "r": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            # "s": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            "t": {
+                "color": {
+                    "yellow": None,
+                    "red": None,
+                    "green": None
+                    }
+            },
+            # "u": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            # "v": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            # "w": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            # "y": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            # "x": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+            # "z": {
+            #     "yellow": None,
+            #     "red": None,
+            #     "green": None
+            # },
+        },
         "head": {
             "frame": None,
             "variant": {
@@ -16,7 +154,6 @@ def load_images(self):
             "frame": None,
             "variant":{
                 "simple": None,}
-                # "inverted": None}
                 },
         "mask": {
             "frame": None,
@@ -59,11 +196,13 @@ def load_images(self):
                 if state_img is None:
                     image = Image.open(f"D:/Sofa/Python/coding-exercises/python/tkinter/warrior_snippet/assets/sprites/{slot}_{state_name}.png")
                     slot_data["state"][state_name] = ImageTk.PhotoImage(image)
-                    
-                    
-        
-
-        
+    
+        for letter, letter_data in self.loaded_images["letter"].items():
+            for color, value in letter_data["color"].items():
+                image = Image.open(f"D:/Sofa/Python/coding-exercises/python/tkinter/warrior_snippet/assets/background/title/font/necrobit/{letter}_letter/{letter}_image_small_{color}.png")
+                letter_data["color"][color] = ImageTk.PhotoImage(image)
+             
+                
 
 # def set_active_slots(self):
 #     self.canvas_widget.addtag_withtag("active", "slot")
@@ -102,7 +241,28 @@ def swap_slot(self):
     self.canvas.itemconfigure(self.button_target.id, image=next_image)
     self.ui.current_images[self.element_target] = next_image
 
-    print(index)
+def loop_letter(self):
+    for letter, obj in self.title_letters.items():
+        next_color = random.choice(
+            list(
+                self.loaded_images["letter"][letter]["color"].values()
+            )
+        )
+        self.canvas_widget.itemconfig(
+            obj.id,
+            image=next_color
+        )
+    self.canvas_widget.after(
+        100,
+        lambda: loop_letter(self)
+        )
+
+#     set_color(self) 
+
+# def set_color(self):
+
+
+    
     
 
 
